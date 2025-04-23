@@ -24,7 +24,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         signup_window.h signup_window.cpp signup_window.ui
-        login.h login.cpp login.ui
+
+        loginwindow.h loginwindow.cpp loginwindow.ui
+        success.h success.cpp success.ui
+        backGrounds.qrc
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET GUI APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/main">
+        <file>build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/backgrounds/main.png</file>
+        <file>build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/backgrounds/login.png</file>
+        <file>build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/backgrounds/signup.png</file>
+        <file>build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/backgrounds/success.png</file>
+    </qresource>
+</RCC>

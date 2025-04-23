@@ -11,8 +11,13 @@ signUp_window::signUp_window(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // Create main layout
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    this->setAutoFillBackground(true);
+    QPixmap bg(":/main/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/backgrounds/signup.png");
+    bg = bg.scaled(this->size(), Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
+
+    QPalette palette;
+    palette.setBrush(QPalette::Window, QBrush(bg));
+    this->setPalette(palette);
 
     // Initialize camera components
     camera = new QCamera(this);
@@ -20,34 +25,29 @@ signUp_window::signUp_window(QWidget *parent)
     session = new QMediaCaptureSession(this);
     imageCapture = new QImageCapture(this);
 
-    // Create UI elements
-    userNameEdit = new QLineEdit(this);
-    QPushButton *snapButton = new QPushButton("Take Photo", this);
-
-    // Configure camera session
+    // Set up camera session
     session->setCamera(camera);
     session->setVideoOutput(viewfinder);
     session->setImageCapture(imageCapture);
 
-    // Add widgets to layout
-    mainLayout->addWidget(viewfinder);
-    mainLayout->addWidget(new QLabel("Name:", this));  // Optional label
-    mainLayout->addWidget(userNameEdit);
-    mainLayout->addWidget(snapButton);
+    // Add the camera viewfinder to the layout from the UI
+    ui->verticalLayout->insertWidget(0, viewfinder); // Assuming you have a verticalLayout in your UI
 
-    // Set the layout on the dialog
-    this->setLayout(mainLayout);
+    // Optional: set size for camera view
+    viewfinder->setFixedSize(320, 240);
 
-    // Connect signals
-    connect(snapButton, &QPushButton::clicked, [this]() {
+    // Connect UI button signals
+    connect(ui->snapButton, &QPushButton::clicked, this, [this]() {
         imageCapture->capture();
     });
+
     connect(imageCapture, &QImageCapture::imageCaptured,
             this, &signUp_window::onImageCaptured);
 
     // Start camera
     camera->start();
 }
+
 
 signUp_window::~signUp_window()
 {
@@ -58,23 +58,36 @@ void signUp_window::onImageCaptured(int id, const QImage &preview)
 {
     Q_UNUSED(id);
 
+    QString baseDir = QCoreApplication::applicationDirPath(); // where .exe is
+    QString pythonPath = "C:\\.venv\\Scripts\\python.exe";
+    QString scriptPath = baseDir + "/newEmbedding.py";
+
     // Save or process the image
-    QString filename = "captured_image.jpg";
+    QString filename = "person.jpg";
     preview.save(filename);
     qDebug() << "Image saved to:" << filename;
 
-   QString userName=userNameEdit->text();
+   QString userName=ui->userNameEdit->text();
   // Run the Python script
     QProcess *process = new QProcess(this);
-    process->start("python", QStringList() << "newEmbedding.py" << filename
-                                           << userName);
+
+   ui->status->setText("adding "+ userName+ " face \n to the database");
+
+    process->start(pythonPath, QStringList() << scriptPath<< userName);
 
     // Optional: connect to signals for finished or error output
     connect(process, &QProcess::readyReadStandardOutput, [=]() {
-        qDebug() << "Output:" << process->readAllStandardOutput();
+         QString output = process->readAllStandardOutput();
+        qDebug() << "Output:" << output;
+        if (output.contains("success", Qt::CaseInsensitive)) {
+            ui->status->setText(userName + "'s face added successfully to the database.");
+        } else if (output.contains("Face not detected", Qt::CaseInsensitive)) {
+            ui->status->setText("Face not detected. Please try again.");
+        }
     });
     connect(process, &QProcess::readyReadStandardError, [=]() {qDebug() << "Error:" << process->readAllStandardError();
     });
+
 }
 
 void signUp_window::on_pushButton_clicked()

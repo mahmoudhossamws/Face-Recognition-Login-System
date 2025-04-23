@@ -1,5 +1,7 @@
-#ifndef SIGNUP_WINDOW_H
-#define SIGNUP_WINDOW_H
+#ifndef LOGINWINDOW_H
+#define LOGINWINDOW_H
+
+#include <QWidget>
 #include <QWidget>
 #include <QtMultimedia/QCamera>
 #include <QtMultimedia/QMediaCaptureSession>
@@ -10,32 +12,27 @@
 #include <QLineEdit>
 
 namespace Ui {
-class signUp_window;
+class loginWindow;
 }
 
-class signUp_window : public QDialog
+class loginWindow : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit signUp_window(QWidget *parent = nullptr);
-    ~signUp_window();
-
+    loginWindow(QWidget *parent = nullptr);
+    ~loginWindow();
 private slots:
     void onImageCaptured(int id, const QImage &preview);
-
     void on_pushButton_clicked();
 
 private:
-    Ui::signUp_window *ui;
+    Ui::loginWindow *ui;
     QCamera*                camera;
     QVideoWidget*           viewfinder;
     QMediaCaptureSession*   session;
     QImageCapture*          imageCapture;
     QPushButton*            snapButton;
-
-    // External process to run your Python script
-    QProcess*               pythonProcess;
 };
 
-#endif // SIGNUP_WINDOW_H
+#endif // LOGINWINDOW_H

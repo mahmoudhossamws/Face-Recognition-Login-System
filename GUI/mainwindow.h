@@ -20,6 +20,8 @@ public:
 private slots:
     void on_sign_up_push_button_clicked();
 
+    void on_login_push_button_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
