@@ -91,7 +91,7 @@ The system consists of three core components:
 
 - **Screenshot 1**: Main Menu – The initial screen of the application, allowing the user to choose between signing up or logging in.
 
-![Screenshot 1](screenshots/1.png)
+![Screenshot 1](screenshots/1.PNG)
 
 - **Screenshot 2**: Signing Up – The user registration screen where users can capture their face data to create a new account.
 
@@ -99,7 +99,7 @@ The system consists of three core components:
 
 - **Screenshot 3**: Successful Login – A screen shown after a successful authentication, displaying a personalized welcome message.
 
-![Screenshot 3](screenshots/3.png)
+![Screenshot 3](screenshots/3.PNG)
 
 - **Screenshot 4**: Login and Searching for Matches – The user authentication process in action, where the system searches for matching face embeddings.
 
@@ -107,7 +107,7 @@ The system consists of three core components:
 
 - **Screenshot 5**: No Face Detected – The system shows this screen when no face is detected during the authentication attempt.
 
-![Screenshot 5](screenshots/5.png)
+![Screenshot 5](screenshots/5.PNG)
 
 
 ---
