@@ -1,0 +1,28 @@
+{
+	"BUILD_DIR" : "D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/GUI_autogen",
+	"CMAKE_BINARY_DIR" : "D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/projects/Face-Recognition-Login-System/GUI",
+	"CMAKE_SOURCE_DIR" : "D:/projects/Face-Recognition-Login-System/GUI",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/GUI_autogen/include",
+	"INPUTS" : 
+	[
+		"D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/backgrounds/success.png",
+		"D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/backgrounds/login.png",
+		"D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/backgrounds/main.png",
+		"D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/backgrounds/signup.png"
+	],
+	"LOCK_FILE" : "D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/GUI_autogen.dir/AutoRcc_backGrounds_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "backGrounds" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_backGrounds.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.9.0/mingw_64/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/GUI_autogen.dir/AutoRcc_backGrounds_EWIEGA46WW_Used.txt",
+	"SOURCE" : "D:/projects/Face-Recognition-Login-System/GUI/backGrounds.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

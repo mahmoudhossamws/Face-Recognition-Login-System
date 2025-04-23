@@ -1,0 +1,17 @@
+# ninja log v6
+42	413	7671167824009731	GUI_autogen/timestamp	537edc9c100114c4
+1697	8707	7671104409646758	CMakeFiles/GUI.dir/GUI_autogen/mocs_compilation.cpp.obj	4c4543d34f158bec
+419	5466	7671167827787748	CMakeFiles/GUI.dir/signup_window.cpp.obj	deb002374a13f166
+42	413	7671167824009731	GUI_autogen/mocs_compilation.cpp	537edc9c100114c4
+42	413	7671167824009731	D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/GUI_autogen/timestamp	537edc9c100114c4
+42	413	7671167824009731	D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/GUI_autogen/mocs_compilation.cpp	537edc9c100114c4
+415	5106	7671167827737891	CMakeFiles/GUI.dir/mainwindow.cpp.obj	49969ded6241b1f1
+391	9483	7671122277835664	CMakeFiles/GUI.dir/main.cpp.obj	5d34b6d9e765098c
+5562	6131	7671167879202696	GUI.exe	ae5e36112c0a1ba7
+569	5365	7671062293358674	CMakeFiles/GUI.dir/login.cpp.obj	6fe1e85b8e8e593a
+23	1235	7671137944350711	build.ninja	69ce50c19513bf85
+429	4734	7671167827877805	CMakeFiles/GUI.dir/success.cpp.obj	9459cf226cdc9372
+424	5562	7671167827837891	CMakeFiles/GUI.dir/loginwindow.cpp.obj	5d3906e861738714
+403	496	7671137949746863	GUI_autogen/EWIEGA46WW/qrc_backGrounds.cpp	189f2ebc07e61e04
+403	496	7671137949746863	D:/projects/Face-Recognition-Login-System/GUI/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/GUI_autogen/EWIEGA46WW/qrc_backGrounds.cpp	189f2ebc07e61e04
+514	1081	7671137950047686	CMakeFiles/GUI.dir/GUI_autogen/EWIEGA46WW/qrc_backGrounds.cpp.obj	1cf773d32f28d363
